@@ -1,0 +1,16 @@
+# Cinnamon custom shortcuts used with this Kitty setup
+# Run these with bash after restoring the config files.
+
+# F12 - show/hide the fullscreen quick-access terminal
+gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom9/ name 'Kitty drop-down'
+gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom9/ command '/home/ssn/.local/bin/kitten quick-access-terminal'
+gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom9/ binding "['F12']"
+
+# Super+T - open a new normal Kitty window
+gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom10/ name 'Kitty'
+gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom10/ command '/home/ssn/.local/bin/kitty'
+gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom10/ binding "['<Super>t']"
+
+# Register both entries. Cinnamon only reloads bindings when this list changes,
+# so if you edit a binding later, remove and re-add its entry here.
+gsettings set org.cinnamon.desktop.keybindings custom-list "['custom1', 'custom2', 'custom3', 'custom4', 'custom6', 'custom7', 'custom8', 'custom9', 'custom10', '__dummy__']"
